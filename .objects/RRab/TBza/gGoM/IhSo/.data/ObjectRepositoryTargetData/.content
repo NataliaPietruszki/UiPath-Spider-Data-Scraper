@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ouykCrG_VEmwDkSA2z10nw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wsc.nmbe.ch/search" CVScreenId="b912456d-ce2e-4522-bc36-e0cd7dc80581" CvElementArea="105, 478, 768, 59" CvType="InputBox" DesignTimeRectangle="107, 479, 766, 58" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='No results found' tag='DIV' /&gt;" Guid="0930bd7e-46f2-4971-85b0-23008ee1c8f7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a43600b8a6dfa2721a1a0025051886cf.png" xmlns="">057ObYNt4C0Cm4M1CVF1gcg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

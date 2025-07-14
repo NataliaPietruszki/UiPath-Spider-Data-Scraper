@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ACEaIZinv0Kk9yl9fNcY0Q" Reference="Z_6TL9OblEe5paRfsflmjw/Z5HrZNnBN0ydWWU5WjGA0Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wsc.nmbe.ch/search" CVScreenId="0be03aee-4ea3-4e80-a61e-f69a49b4b111" CvTextArea="286, 522, 67, 16" CvTextArgument="Ascending" CvType="Text" DesignTimeRectangle="287, 521, 66, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Ascending' tag='A' /&gt;" Guid="db4a50a0-d3bf-4308-a4b4-1941e749dcc0" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0be03aee-4ea3-4e80-a61e-f69a49b4b111" CvTextArea="363, 522, 75, 16" CvTextArgument="Descending" CvType="Text" DesignTimeRectangle="364, 521, 74, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Descending' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Descending' /&gt;" Guid="89c219fc-41ac-4f9d-a6cf-fbbbb19fc880" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e38aedc6a175df90a62b17e37b4868ec.png" xmlns="">06G2_NhYHeE-4Lc5Bk0XCHQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

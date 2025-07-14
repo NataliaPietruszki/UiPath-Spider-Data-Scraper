@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="bQUA5ZjIjEKgCqD2KPirCg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="1043, -1260, 1264, 1078" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE9SURBVDhPjZKhioJBFIX/V/EJfALxAXwAMRuMJpPRYBVshnXbBjUZBJNBxCIIgiAYNiyLYZNrMY18F89w/1HBA8P/35l7z5x75mbB4Xy5hvX2174+/jn9x5w0zuLfvaBQHoSP0c7i8exgcau7sHh//LN4vvyONTkCUKp+xQK+lfrE9oAIXyoAKgIU+qJOfxWKlc9c/gMB8imQXAAhRLXmNDTa81z+AwEmUUgiBaA33FjMPv8eRoB53EwBi0SkykzUELOPGtrkokjApg4hULJu0+0sf84FmXrFIAFFGEgiJKl0nbMfCZRM7IGq1HnAq7CsBXqSRJGhSIMlM58hvgKmQKT+5MlbBMjW/CtWsRSlwEAzUYOTvi8t6Pb0XM/KyrhZsmmBRHmikRYJzuufxXTGFvxbQwiJb4tkTacfpBvfRyq8g4zMngAAAABJRU5ErkJggg==" Selector="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" Url="https://wsc.nmbe.ch/search" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="e92c41041c2f34f7b2ef20addad0693c.jpg" xmlns="">0PKeEW0jU1kyELi-8ZVZpCQ</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5-P0_7w8qE-k_UmfFIPY9w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wsc.nmbe.ch/search" CVScreenId="4d14354c-49ab-4fab-ae99-6e36ace20594" CvElementArea="770, 415, 78, 28" CvTextArea="790, 422, 39, 12" CvTextArgument="Search" CvType="Button" DesignTimeRectangle="772, 416, 76, 26" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" Guid="3235ba49-7d97-4316-9fa7-5a9128c01ce2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="107, 243, 766, 215" ElementType="Container" FuzzySelectorArgument="&lt;webctrl id='taxSearch' tag='FORM' type='' class='ym-form ym-full linearize-form' aaname='                                                                                 ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Family&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Genus&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Species&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Multi purpose search field You can restrict species and genus authority by providing genus or family, respectively&amp;#xA;Spec LSID&amp;#xA;Gen LSID&amp;#xA;Fam LSID&amp;#xA;Spec Author&amp;#xA;Gen Author&amp;#xA;contains&amp;#xA;begins with&amp;#xA;exact&amp;#xA;Clear form&amp;#xA;Search' /&gt;" Guid="caad0263-f313-4a2a-9e38-f1a22c227c02" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4370cd377742f8e89aec239cdb853266.png" xmlns="">0TUSc_Sv98U6LxCPWJvzx2A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

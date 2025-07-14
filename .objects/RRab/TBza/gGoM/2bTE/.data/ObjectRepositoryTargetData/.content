@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="t8zWZUJHhkKCtfTEzLC1aA" Reference="Z_6TL9OblEe5paRfsflmjw/2bTEHWyFc0S4O78V409z2w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://wsc.nmbe.ch/search?page=1&amp;sFamily=&amp;fMt=contain&amp;sGenus=&amp;gMt=contain&amp;sSpecies=imm&amp;sMt=contain&amp;multiPurpose=slsid&amp;sMulti=&amp;mMt=contain&amp;searchSpec=s" ContentHash="9KgyLXaX5Ee8XWhA1SwZxA" DesignTimeRectangle="50, -1381, 631, 2072" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="4805fc79-8541-4751-9705-9276c4276321" Reference="Z_6TL9OblEe5paRfsflmjw/2bTEHWyFc0S4O78V409z2w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5147b89ce246aeab36bdbd748375f63b.png" xmlns="">0j8HY5knBHUylDgpW0r8BPw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">ExtractData</x:String>
+    <p:InArgument x:TypeArguments="x:String" x:Key="ExtractDataSettings" xml:space="preserve">&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;
+	&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;
+		&lt;IsValidName&gt;true&lt;/IsValidName&gt;
+		&lt;ValidationErrorMessage /&gt;
+		&lt;IsExtra&gt;false&lt;/IsExtra&gt;
+		&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;
+		&lt;Format xsi:type='TextColumnFormat' /&gt;
+	&lt;/Column&gt;
+	&lt;Column xsi:type='DataNextLink' /&gt;
+&lt;/Table&gt;</p:InArgument>
+    <TargetAnchorable x:Key="NextLinkTarget" BrowserURL="wsc.nmbe.ch/search" CVScreenId="65418071-6c81-44ba-bf7c-47fb4ab16b74" CvElementArea="250, 360, 28, 21" CvType="Icon" DesignTimeRectangle="247, 563, 45, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Next »' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Next »' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Next »' /&gt;" Guid="67398995-c4f3-4418-a692-30205ff2a1d6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAUCAYAAAAk/dWZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGWSURBVFhH7ZTBisIwEIZ9pH2RvsWCb6KnvXnp0d56Wjx7VYo9bKEg0osgCHsRAgXxIszSSaZJJrWbUgvbxcCP0kxm5puZZBKGIYxdE/5hjJoIIaCP3t6/WsXth9ALohJPmovbD6FWiP0qhWCewrLgewXM5gnMtv0hMEZUON+7yAMigWCRw97aGxtElGHC09XJ2GuA2NzAXMeNgihymLLzsjgZxFSkxkL5ywOiALHN2FgxCAS4wScBxSWUcIddrDqB5zNYV/8RSvtq74SOY/lg8oMQAtaRWS0T4gy7q6486eNwB/i+KF8nWC4SCKIcf52uPISwodG2oWPeEJS4TMCEuMDRGiRj1RCUjDs2v0KQDZ6TxbBHuxMEtbSqigvBO+FcbIJgI+HEaJB+JVVHWSG6QdRjlWJC5jiVh7MDoCGogoUaK+2zKYal544TSXahelHsiy0vskxeg9V+KLjqCF7WhzHsWE+72JbQof3E4kU2FnXGtLX8Wq+VO2Zd1ArhIz4+XNx+CL0gKvGkubj9EOoN8Rf0LyB+AGWBLrJgRy7tAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="29, 241, 673, 257" FullSelectorArgument="&lt;webctrl class='ym-gbox' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ym-gbox' tag='DIV' type='' aaname='                                  ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Search taxa&amp;#xA;Family&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Genus&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Species&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Multi purpose search field You can restrict species and genus authority by providing genus or family, respectively&amp;#xA;Spec LSID&amp;#xA;Gen LSID&amp;#xA;Fam LSID&amp;#xA;Spec Author&amp;#xA;Gen Author&amp;#xA;contains&amp;#xA;begins with&amp;#xA;exact&amp;#xA;Clear form&amp;#xA;Search' /&gt;" Guid="687a02c2-8591-4ab5-ab0e-9fc4295ba010" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

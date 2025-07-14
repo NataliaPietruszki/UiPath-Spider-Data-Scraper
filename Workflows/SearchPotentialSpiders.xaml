@@ -1,0 +1,446 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchPotentialSpiders" this:SearchPotentialSpiders.InSearchingSpiderName="imma" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="OutExtractedPotentialSpidersText" Type="OutArgument(x:String)" />
+    <x:Property Name="InSearchingSpiderName" Type="InArgument(x:String)" />
+    <x:Property Name="InSearchingSpiderType" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>SearchPotentialSpiders_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SearchPotentialSpiders" sap:VirtualizedContainerService.HintSize="1997,4200" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1560,4177" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="c22ad722-48fb-45d8-827f-37f25144e3af">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1526,3937" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[InSearchingSpiderType]" sap:VirtualizedContainerService.HintSize="1492,2396" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Switch.Default>
+                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="416,526" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Species''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="WZ30w9hnI06JJphTpR5Wrw" CvElementArea="267, 324, 439, 29" CvType="InputBox" DesignTimeRectangle="269, 326, 437, 27" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='sSpecies' tag='INPUT' type='text' class='tt-query' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="908109c5-f89c-4f34-b38d-e529a95a13f7" InformativeScreenshot="3e266a9ecc8c2daf0eeffad403fd22c8.png" IsResponsive="True" Reference="Z_6TL9OblEe5paRfsflmjw/ArBGp8cK-0qUbucIn9SS5w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" CvTextArea="121, 327, 52, 16" CvTextArgument="Species" CvType="Text" DesignTimeRectangle="123, 326, 49, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Species' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Species' /&gt;" Guid="2bc03a13-8f6f-473f-9a75-c52a5db86643" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="3">
+                        <x:String>begins with</x:String>
+                        <x:String>contains</x:String>
+                        <x:String>exact</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="lkEWPLIM3Uy-cSU3C0DlMw" CvElementArea="709, 325, 145, 28" CvType="InputBox" DesignTimeRectangle="710, 326, 143, 26" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='sMt' tag='SELECT' /&gt;" Guid="a43a7aa3-bc21-443a-a619-7dad14f0a155" InformativeScreenshot="97e3dbc3c94967f8f23f819ba6a58533.png" Reference="Z_6TL9OblEe5paRfsflmjw/ZBU3lTFnYEapStwhIHkcFA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="109, 326, 762, 27" FuzzySelectorArgument="&lt;webctrl type='' class='ym-fbox-wrap ym-grid' parentid='taxSearch' tag='DIV' aaname='                                                                                 ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Species&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact' /&gt;" Guid="034c819a-d4e9-4f50-818f-9cc3ff09537a" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </Switch.Default>
+              <Sequence x:Key="Family" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,526" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Family''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b74d2cd8-8e64-45ad-b9ea-8b3225c6389d" CvElementArea="267, 258, 439, 27" CvType="InputBox" DesignTimeRectangle="269, 259, 437, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='sFamily' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sFamily' tag='INPUT' type='text' class='tt-query' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="fb790ac6-988e-4926-9a4f-68cd5e518cab" InformativeScreenshot="cb7df7b4fd52433fab988937cad74ce1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="b74d2cd8-8e64-45ad-b9ea-8b3225c6389d" CvTextArea="121, 260, 43, 16" CvTextArgument="Family" CvType="Text" DesignTimeRectangle="123, 259, 41, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Family' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Family' /&gt;" Guid="f33603d3-798c-434e-b15b-49a166666484" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                      <uix:TargetAnchorable.PointOffset>
+                        <uix:PointOffset />
+                      </uix:TargetAnchorable.PointOffset>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <uix:NTypeInto.VerifyOptions>
+                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    </uix:VerifyExecutionTypeIntoOptions>
+                  </uix:NTypeInto.VerifyOptions>
+                </uix:NTypeInto>
+                <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                  <uix:NSelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="3">
+                      <x:String>begins with</x:String>
+                      <x:String>contains</x:String>
+                      <x:String>exact</x:String>
+                    </scg:List>
+                  </uix:NSelectItem.Items>
+                  <uix:NSelectItem.Target>
+                    <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="P5DJ_hwWvUSVNgP9S1NNEw" CvElementArea="709, 258, 146, 28" CvType="InputBox" DesignTimeRectangle="710, 259, 143, 26" ElementType="DropDown" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" Guid="10956a02-c511-407e-a3f1-16acbcc5eec2" InformativeScreenshot="0fb97fe24cf3fc36a66d3ca9e1e20967.png" Reference="Z_6TL9OblEe5paRfsflmjw/tvWq3Hh7Ok2OAiuUfAdS6g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="109, 259, 762, 26" FuzzySelectorArgument="&lt;webctrl type='' parentid='taxSearch' tag='DIV' class='ym-fbox-wrap ym-grid' aaname='                                                                                ' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Family&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact' /&gt;" Guid="ccb6861a-2edd-47e0-a9ac-a45c1007c74b" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                      <uix:TargetAnchorable.PointOffset>
+                        <uix:PointOffset />
+                      </uix:TargetAnchorable.PointOffset>
+                    </uix:TargetAnchorable>
+                  </uix:NSelectItem.Target>
+                </uix:NSelectItem>
+              </Sequence>
+              <Sequence x:Key="&quot;Genus&quot;" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,526" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Genus''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="WZ30w9hnI06JJphTpR5Wrw" CvElementArea="267, 324, 439, 29" CvType="InputBox" DesignTimeRectangle="269, 326, 437, 27" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='sSpecies' tag='INPUT' type='text' class='tt-query' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="908109c5-f89c-4f34-b38d-e529a95a13f7" InformativeScreenshot="3e266a9ecc8c2daf0eeffad403fd22c8.png" IsResponsive="True" Reference="Z_6TL9OblEe5paRfsflmjw/ArBGp8cK-0qUbucIn9SS5w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" CvTextArea="121, 327, 52, 16" CvTextArgument="Species" CvType="Text" DesignTimeRectangle="123, 326, 49, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Species' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Species' /&gt;" Guid="2bc03a13-8f6f-473f-9a75-c52a5db86643" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <uix:NTypeInto.VerifyOptions>
+                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    </uix:VerifyExecutionTypeIntoOptions>
+                  </uix:NTypeInto.VerifyOptions>
+                </uix:NTypeInto>
+                <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="begins with" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                  <uix:NSelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="3">
+                      <x:String>begins with</x:String>
+                      <x:String>contains</x:String>
+                      <x:String>exact</x:String>
+                    </scg:List>
+                  </uix:NSelectItem.Items>
+                  <uix:NSelectItem.Target>
+                    <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="lkEWPLIM3Uy-cSU3C0DlMw" CvElementArea="709, 325, 145, 28" CvType="InputBox" DesignTimeRectangle="710, 326, 143, 26" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='sMt' tag='SELECT' /&gt;" Guid="a43a7aa3-bc21-443a-a619-7dad14f0a155" InformativeScreenshot="97e3dbc3c94967f8f23f819ba6a58533.png" Reference="Z_6TL9OblEe5paRfsflmjw/ZBU3lTFnYEapStwhIHkcFA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="109, 326, 762, 27" FuzzySelectorArgument="&lt;webctrl type='' class='ym-fbox-wrap ym-grid' parentid='taxSearch' tag='DIV' aaname='                                                                                 ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Species&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact' /&gt;" Guid="034c819a-d4e9-4f50-818f-9cc3ff09537a" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSelectItem.Target>
+                </uix:NSelectItem>
+              </Sequence>
+              <Sequence x:Key="&quot;Species&quot;" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,526" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Species''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="WZ30w9hnI06JJphTpR5Wrw" CvElementArea="267, 324, 439, 29" CvType="InputBox" DesignTimeRectangle="269, 326, 437, 27" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='sSpecies' tag='INPUT' type='text' class='tt-query' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="908109c5-f89c-4f34-b38d-e529a95a13f7" InformativeScreenshot="3e266a9ecc8c2daf0eeffad403fd22c8.png" IsResponsive="True" Reference="Z_6TL9OblEe5paRfsflmjw/ArBGp8cK-0qUbucIn9SS5w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" CvTextArea="121, 327, 52, 16" CvTextArgument="Species" CvType="Text" DesignTimeRectangle="123, 326, 49, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Species' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Species' /&gt;" Guid="2bc03a13-8f6f-473f-9a75-c52a5db86643" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <uix:NTypeInto.VerifyOptions>
+                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    </uix:VerifyExecutionTypeIntoOptions>
+                  </uix:NTypeInto.VerifyOptions>
+                </uix:NTypeInto>
+                <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                  <uix:NSelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="3">
+                      <x:String>begins with</x:String>
+                      <x:String>contains</x:String>
+                      <x:String>exact</x:String>
+                    </scg:List>
+                  </uix:NSelectItem.Items>
+                  <uix:NSelectItem.Target>
+                    <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="lkEWPLIM3Uy-cSU3C0DlMw" CvElementArea="709, 325, 145, 28" CvType="InputBox" DesignTimeRectangle="710, 326, 143, 26" ElementType="DropDown" FullSelectorArgument="&lt;webctrl name='sMt' tag='SELECT' /&gt;" Guid="a43a7aa3-bc21-443a-a619-7dad14f0a155" InformativeScreenshot="97e3dbc3c94967f8f23f819ba6a58533.png" Reference="Z_6TL9OblEe5paRfsflmjw/ZBU3lTFnYEapStwhIHkcFA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="109, 326, 762, 27" FuzzySelectorArgument="&lt;webctrl type='' class='ym-fbox-wrap ym-grid' parentid='taxSearch' tag='DIV' aaname='                                                                                 ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Species&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact' /&gt;" Guid="034c819a-d4e9-4f50-818f-9cc3ff09537a" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSelectItem.Target>
+                </uix:NSelectItem>
+              </Sequence>
+            </Switch>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Search''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1492,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b74d2cd8-8e64-45ad-b9ea-8b3225c6389d" CvElementArea="770, 415, 79, 28" CvTextArea="790, 422, 39, 12" CvTextArgument="Search" CvType="Button" DesignTimeRectangle="772, 416, 76, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='ym-button ym-small' aaname='Search' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Search' /&gt;" Guid="a0a20c84-1094-40b5-ac8a-e2f276d55b0f" InformativeScreenshot="ca27fdefca9c92684708296396938985.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Button 'Button 'Search''" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="4d14354c-49ab-4fab-ae99-6e36ace20594" ContentHash="5-P0_7w8qE-k_UmfFIPY9w" CvElementArea="770, 415, 78, 28" CvTextArea="790, 422, 39, 12" CvTextArgument="Search" CvType="Button" DesignTimeRectangle="772, 416, 76, 26" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" Guid="3235ba49-7d97-4316-9fa7-5a9128c01ce2" InformativeScreenshot="4370cd377742f8e89aec239cdb853266.png" Reference="Z_6TL9OblEe5paRfsflmjw/LyDTnmbDGkOkwg89yGMScg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="107, 243, 766, 215" ElementType="Container" FuzzySelectorArgument="&lt;webctrl id='taxSearch' tag='FORM' type='' class='ym-form ym-full linearize-form' aaname='                                                                                 ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Family&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Genus&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Species&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Multi purpose search field You can restrict species and genus authority by providing genus or family, respectively&amp;#xA;Spec LSID&amp;#xA;Gen LSID&amp;#xA;Fam LSID&amp;#xA;Spec Author&amp;#xA;Gen Author&amp;#xA;contains&amp;#xA;begins with&amp;#xA;exact&amp;#xA;Clear form&amp;#xA;Search' /&gt;" Guid="caad0263-f313-4a2a-9e38-f1a22c227c02" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'No results found'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1492,1254" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,172" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,110" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Spiders doesn't found&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="988,1012" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State 'Results (Total 17)    …'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="954,950" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,529" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="sd:DataTable" Name="ExtarctedPotentialSpiders" />
+                          <Variable x:TypeArguments="x:String" Name="ExtractedPotentialSpidersText" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtarctedPotentialSpiders]" DisplayName="Extract Table Data 'Extract Table Data'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                          <uix:NExtractData.NextLink>
+                            <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="65418071-6c81-44ba-bf7c-47fb4ab16b74" CvElementArea="250, 360, 28, 21" CvType="Icon" DesignTimeRectangle="247, 563, 45, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Next »' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Next »' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Next »' /&gt;" Guid="67398995-c4f3-4418-a692-30205ff2a1d6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAUCAYAAAAk/dWZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGWSURBVFhH7ZTBisIwEIZ9pH2RvsWCb6KnvXnp0d56Wjx7VYo9bKEg0osgCHsRAgXxIszSSaZJJrWbUgvbxcCP0kxm5puZZBKGIYxdE/5hjJoIIaCP3t6/WsXth9ALohJPmovbD6FWiP0qhWCewrLgewXM5gnMtv0hMEZUON+7yAMigWCRw97aGxtElGHC09XJ2GuA2NzAXMeNgihymLLzsjgZxFSkxkL5ywOiALHN2FgxCAS4wScBxSWUcIddrDqB5zNYV/8RSvtq74SOY/lg8oMQAtaRWS0T4gy7q6486eNwB/i+KF8nWC4SCKIcf52uPISwodG2oWPeEJS4TMCEuMDRGiRj1RCUjDs2v0KQDZ6TxbBHuxMEtbSqigvBO+FcbIJgI+HEaJB+JVVHWSG6QdRjlWJC5jiVh7MDoCGogoUaK+2zKYal544TSXahelHsiy0vskxeg9V+KLjqCF7WhzHsWE+72JbQof3E4kU2FnXGtLX8Wq+VO2Zd1ArhIz4+XNx+CL0gKvGkubj9EOoN8Rf0LyB+AGWBLrJgRy7tAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="29, 241, 673, 257" FullSelectorArgument="&lt;webctrl class='ym-gbox' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ym-gbox' tag='DIV' type='' aaname='                                  ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Search taxa&amp;#xA;Family&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Genus&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Species&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact&amp;#xA;Multi purpose search field You can restrict species and genus authority by providing genus or family, respectively&amp;#xA;Spec LSID&amp;#xA;Gen LSID&amp;#xA;Fam LSID&amp;#xA;Spec Author&amp;#xA;Gen Author&amp;#xA;contains&amp;#xA;begins with&amp;#xA;exact&amp;#xA;Clear form&amp;#xA;Search' /&gt;" Guid="687a02c2-8591-4ab5-ab0e-9fc4295ba010" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                              <uix:TargetAnchorable.PointOffset>
+                                <uix:PointOffset />
+                              </uix:TargetAnchorable.PointOffset>
+                            </uix:TargetAnchorable>
+                          </uix:NExtractData.NextLink>
+                          <uix:NExtractData.Target>
+                            <uix:TargetAnchorable BrowserURL="https://wsc.nmbe.ch/search?page=1&amp;sFamily=&amp;fMt=contain&amp;sGenus=&amp;gMt=contain&amp;sSpecies=imm&amp;sMt=contain&amp;multiPurpose=slsid&amp;sMulti=&amp;mMt=contain&amp;searchSpec=s" ContentHash="t8zWZUJHhkKCtfTEzLC1aA" DesignTimeRectangle="50, -1381, 631, 2072" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="4805fc79-8541-4751-9705-9276c4276321" InformativeScreenshot="5147b89ce246aeab36bdbd748375f63b.png" Reference="Z_6TL9OblEe5paRfsflmjw/2bTEHWyFc0S4O78V409z2w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" />
+                          </uix:NExtractData.Target>
+                        </uix:NExtractData>
+                        <ui:OutputDataTable DataTable="[ExtarctedPotentialSpiders]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="416,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[OutExtractedPotentialSpidersText]" />
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PrepareSpidersToCheck - Invoke Workflow File (Workflows\PrepareSpidersToCheck.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\PrepareSpidersToCheck.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_ExtractedPotentialSpiders">[OutExtractedPotentialSpidersText]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,172" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,110" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Spiders doesn't found&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="0be03aee-4ea3-4e80-a61e-f69a49b4b111" ContentHash="ACEaIZinv0Kk9yl9fNcY0Q" CvTextArea="286, 522, 67, 16" CvTextArgument="Ascending" CvType="Text" DesignTimeRectangle="287, 521, 66, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Ascending' tag='A' /&gt;" Guid="db4a50a0-d3bf-4308-a4b4-1941e749dcc0" InformativeScreenshot="e38aedc6a175df90a62b17e37b4868ec.png" Reference="Z_6TL9OblEe5paRfsflmjw/Z5HrZNnBN0ydWWU5WjGA0Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="0be03aee-4ea3-4e80-a61e-f69a49b4b111" CvTextArea="363, 522, 75, 16" CvTextArgument="Descending" CvType="Text" DesignTimeRectangle="364, 521, 74, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Descending' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Descending' /&gt;" Guid="89c219fc-41ac-4f9d-a6cf-fbbbb19fc880" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b912456d-ce2e-4522-bc36-e0cd7dc80581" ContentHash="ouykCrG_VEmwDkSA2z10nw" CvElementArea="105, 478, 768, 59" CvType="InputBox" DesignTimeRectangle="107, 479, 766, 58" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='No results found' tag='DIV' /&gt;" Guid="0930bd7e-46f2-4971-85b0-23008ee1c8f7" InformativeScreenshot="a43600b8a6dfa2721a1a0025051886cf.png" Reference="Z_6TL9OblEe5paRfsflmjw/IhSovtvb_k2GYlnmc1wKcA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1043, -1260, 1264, 1078" BrowserType="Chrome" ContentHash="bQUA5ZjIjEKgCqD2KPirCg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE9SURBVDhPjZKhioJBFIX/V/EJfALxAXwAMRuMJpPRYBVshnXbBjUZBJNBxCIIgiAYNiyLYZNrMY18F89w/1HBA8P/35l7z5x75mbB4Xy5hvX2174+/jn9x5w0zuLfvaBQHoSP0c7i8exgcau7sHh//LN4vvyONTkCUKp+xQK+lfrE9oAIXyoAKgIU+qJOfxWKlc9c/gMB8imQXAAhRLXmNDTa81z+AwEmUUgiBaA33FjMPv8eRoB53EwBi0SkykzUELOPGtrkokjApg4hULJu0+0sf84FmXrFIAFFGEgiJKl0nbMfCZRM7IGq1HnAq7CsBXqSRJGhSIMlM58hvgKmQKT+5MlbBMjW/CtWsRSlwEAzUYOTvi8t6Pb0XM/KyrhZsmmBRHmikRYJzuufxXTGFvxbQwiJb4tkTacfpBvfRyq8g4zMngAAAABJRU5ErkJggg==" InformativeScreenshot="e92c41041c2f34f7b2ef20addad0693c.jpg" Reference="Z_6TL9OblEe5paRfsflmjw/gGoMnAqcAECxhfxZLApc4A" Selector="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" Url="https://wsc.nmbe.ch/search" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="P5DJ_hwWvUSVNgP9S1NNEw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" CvElementArea="709, 258, 146, 28" CvType="InputBox" DesignTimeRectangle="710, 259, 143, 26" ElementType="DropDown" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" Guid="10956a02-c511-407e-a3f1-16acbcc5eec2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="109, 259, 762, 26" FuzzySelectorArgument="&lt;webctrl type='' parentid='taxSearch' tag='DIV' class='ym-fbox-wrap ym-grid' aaname='                                                                                ' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Family&amp;#xA;begins with&amp;#xA;contains&amp;#xA;exact' /&gt;" Guid="ccb6861a-2edd-47e0-a9ac-a45c1007c74b" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="0fb97fe24cf3fc36a66d3ca9e1e20967.png" xmlns="">0QS_yexmdIESLeTnVse-4Gw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
