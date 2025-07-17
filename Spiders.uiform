@@ -16,10 +16,11 @@
         "label": "Spiders",
         "widget": "choicesjs",
         "tableView": false,
-        "multiple": true,
+        "customOptions": "",
         "key": "In_ChoosenSpiderList",
         "type": "select",
-        "input": true
+        "input": true,
+        "keyModified": true
       },
       {
         "label": "Get",
