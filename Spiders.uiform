@@ -1,0 +1,36 @@
+﻿{
+  "Metadata": {
+    "Id": "3cd26938-c2ee-4e06-a406-92a5f54f1e70",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "Spiders",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "Spiders",
+        "widget": "choicesjs",
+        "tableView": false,
+        "multiple": true,
+        "key": "In_ChoosenSpiderList",
+        "type": "select",
+        "input": true
+      },
+      {
+        "label": "Get",
+        "action": "event",
+        "showValidations": false,
+        "disableOnInvalid": true,
+        "tableView": false,
+        "key": "submit",
+        "type": "button",
+        "input": true
+      }
+    ]
+  }
+}

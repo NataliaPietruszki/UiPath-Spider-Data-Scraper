@@ -1,7 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SearchPotentialSpiders" this:SearchPotentialSpiders.InSearchingSpiderName="imma" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchPotentialSpiders" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="OutExtractedPotentialSpiders" Type="OutArgument(sd:DataTable)" />
-    <x:Property Name="InSearchingSpiderName" Type="InArgument(x:String)" />
+    <x:Property Name="InSearchingSpiderName" Type="InOutArgument(x:String)" />
     <x:Property Name="InSearchingSpiderType" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
@@ -104,7 +104,6 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
@@ -113,33 +112,33 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SearchPotentialSpiders" sap:VirtualizedContainerService.HintSize="1997,4200" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="SearchPotentialSpiders" sap:VirtualizedContainerService.HintSize="1555.2,3920" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1560,4177" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="c22ad722-48fb-45d8-827f-37f25144e3af">
+    <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1555.2,3896.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="c22ad722-48fb-45d8-827f-37f25144e3af">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1526,3937" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1521.6,3656.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[InSearchingSpiderType]" sap:VirtualizedContainerService.HintSize="1492,2396" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[InSearchingSpiderType]" sap:VirtualizedContainerService.HintSize="1488,2401.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <Switch.Default>
-                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="416,526" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="416,527.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Species''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Species''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="WZ30w9hnI06JJphTpR5Wrw" CvElementArea="267, 324, 439, 29" CvType="InputBox" DesignTimeRectangle="269, 326, 437, 27" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='sSpecies' tag='INPUT' type='text' class='tt-query' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="908109c5-f89c-4f34-b38d-e529a95a13f7" InformativeScreenshot="3e266a9ecc8c2daf0eeffad403fd22c8.png" IsResponsive="True" Reference="Z_6TL9OblEe5paRfsflmjw/ArBGp8cK-0qUbucIn9SS5w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -160,7 +159,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                  <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,180.8" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
                     <uix:NSelectItem.Items>
                       <scg:List x:TypeArguments="x:String" Capacity="3">
                         <x:String>begins with</x:String>
@@ -180,14 +179,14 @@
                   </uix:NSelectItem>
                 </Sequence>
               </Switch.Default>
-              <Sequence x:Key="Family" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,526" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence x:Key="Family" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,527.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Family''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Family''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
                   <uix:NTypeInto.Target>
                     <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b74d2cd8-8e64-45ad-b9ea-8b3225c6389d" CvElementArea="267, 258, 439, 27" CvType="InputBox" DesignTimeRectangle="269, 259, 437, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='sFamily' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sFamily' tag='INPUT' type='text' class='tt-query' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="fb790ac6-988e-4926-9a4f-68cd5e518cab" InformativeScreenshot="cb7df7b4fd52433fab988937cad74ce1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -211,7 +210,7 @@
                     </uix:VerifyExecutionTypeIntoOptions>
                   </uix:NTypeInto.VerifyOptions>
                 </uix:NTypeInto>
-                <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,180.8" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
                   <uix:NSelectItem.Items>
                     <scg:List x:TypeArguments="x:String" Capacity="3">
                       <x:String>begins with</x:String>
@@ -233,13 +232,13 @@
                   </uix:NSelectItem.Target>
                 </uix:NSelectItem>
               </Sequence>
-              <Sequence x:Key="&quot;Genus&quot;" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,526" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence x:Key="&quot;Genus&quot;" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,526.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Genus''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Genus''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
                   <uix:NTypeInto.Target>
                     <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="WZ30w9hnI06JJphTpR5Wrw" CvElementArea="267, 324, 439, 29" CvType="InputBox" DesignTimeRectangle="269, 326, 437, 27" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='sSpecies' tag='INPUT' type='text' class='tt-query' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="908109c5-f89c-4f34-b38d-e529a95a13f7" InformativeScreenshot="3e266a9ecc8c2daf0eeffad403fd22c8.png" IsResponsive="True" Reference="Z_6TL9OblEe5paRfsflmjw/ArBGp8cK-0qUbucIn9SS5w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -279,13 +278,13 @@
                   </uix:NSelectItem.Target>
                 </uix:NSelectItem>
               </Sequence>
-              <Sequence x:Key="&quot;Species&quot;" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,526" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence x:Key="&quot;Species&quot;" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,527.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Species''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Species''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Text="[InSearchingSpiderName]" Version="V5">
                   <uix:NTypeInto.Target>
                     <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b2746934-15a4-4741-8e4e-f2be403b1e97" ContentHash="WZ30w9hnI06JJphTpR5Wrw" CvElementArea="267, 324, 439, 29" CvType="InputBox" DesignTimeRectangle="269, 326, 437, 27" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='sSpecies' tag='INPUT' type='text' class='tt-query' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="908109c5-f89c-4f34-b38d-e529a95a13f7" InformativeScreenshot="3e266a9ecc8c2daf0eeffad403fd22c8.png" IsResponsive="True" Reference="Z_6TL9OblEe5paRfsflmjw/ArBGp8cK-0qUbucIn9SS5w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -306,7 +305,7 @@
                     </uix:VerifyExecutionTypeIntoOptions>
                   </uix:NTypeInto.VerifyOptions>
                 </uix:NTypeInto>
-                <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                <uix:NSelectItem DisplayName="Select Item ''contains''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,180.8" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="contains" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
                   <uix:NSelectItem.Items>
                     <scg:List x:TypeArguments="x:String" Capacity="3">
                       <x:String>begins with</x:String>
@@ -326,7 +325,7 @@
                 </uix:NSelectItem>
               </Sequence>
             </Switch>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Search''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1492,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Search''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1488,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="wsc.nmbe.ch/search" CVScreenId="b74d2cd8-8e64-45ad-b9ea-8b3225c6389d" CvElementArea="770, 415, 79, 28" CvTextArea="790, 422, 39, 12" CvTextArgument="Search" CvType="Button" DesignTimeRectangle="772, 416, 76, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='ym-button ym-small' aaname='Search' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Search' /&gt;" Guid="a0a20c84-1094-40b5-ac8a-e2f276d55b0f" InformativeScreenshot="ca27fdefca9c92684708296396938985.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive">
                   <uix:TargetAnchorable.PointOffset>
@@ -354,27 +353,27 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'No results found'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1492,1254" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'No results found'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1488,968" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,172" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,172" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,110" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Spiders doesn't found&quot;]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Spiders doesn't found&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="988,1012" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="985.6,724.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState DisplayName="Check App State 'Results (Total 17)    …'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="954,950" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
+                  <uix:NCheckState DisplayName="Check App State 'Results (Total 17)    …'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="952,663.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="c22ad722-48fb-45d8-827f-37f25144e3af" Version="V5">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,416.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,420" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="ExtarctedPotentialSpiders" />
                           <Variable x:TypeArguments="x:String" Name="ExtractedPotentialSpidersText" />
@@ -401,21 +400,22 @@
                             <uix:TargetAnchorable BrowserURL="https://wsc.nmbe.ch/search?sFamily=&amp;fMt=begin&amp;sGenus=&amp;gMt=begin&amp;sSpecies=Imma&amp;sMt=contain&amp;multiPurpose=slsid&amp;sMulti=&amp;mMt=contain&amp;searchSpec=s" ContentHash="viBoMXv9N0yn6kmYkMqTLQ" DesignTimeRectangle="50, 519, 719, 1645" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="0fd7fb28-c465-420a-a1be-20ba0f0fbb6a" InformativeScreenshot="5147b89ce246aeab36bdbd748375f63b.png" Reference="Z_6TL9OblEe5paRfsflmjw/2bTEHWyFc0S4O78V409z2w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NMBE - World Spider Catalog' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" />
                           </uix:NExtractData.Target>
                         </uix:NExtractData>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PrepareSpidersToCheck - Invoke Workflow File (Workflows\PrepareSpidersToCheck.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\PrepareSpidersToCheck.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PrepareSpidersToCheck - Invoke Workflow File (Workflows\PrepareSpidersToCheck.xaml)" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\PrepareSpidersToCheck.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="sd:DataTable" x:Key="In_ExtractedPotentialSpiders">[OutExtractedPotentialSpiders]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="In_SearchingSpiderName">[InSearchingSpiderName]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,172" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,172" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,110" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Spiders doesn't found&quot;]" />
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Spiders doesn't found&quot;]" />
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
