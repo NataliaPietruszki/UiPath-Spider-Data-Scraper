@@ -126,7 +126,7 @@
       <AssemblyReference>PresentationFramework</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PrepareSpidersToCheck" sap:VirtualizedContainerService.HintSize="954.8000000000001,2406.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PrepareSpidersToCheck" sap:VirtualizedContainerService.HintSize="954.8000000000001,2360" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="TestData" />
       <Variable x:TypeArguments="x:String" Name="ExtractedPotentialSpidersText" />
@@ -235,8 +235,7 @@
         </uascf:CollectionFilterSettings>
       </uasc:FilterCollection.Filter>
     </uasc:FilterCollection>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[SpiderList]" />
-    <ufa:ShowFormActivity InstanceName="{x:Null}" Left="{x:Null}" DisplayName="Show Form" FormId="3cd26938-c2ee-4e06-a406-92a5f54f1e70" sap:VirtualizedContainerService.HintSize="478.4,210.4" sap2010:WorkflowViewState.IdRef="ShowFormActivity_1" IsAsync="False" Title="Spider" WindowState="[UiPath.Studio.Forms.Runtime.WindowState.Normal]">
+    <ufa:ShowFormActivity InstanceName="{x:Null}" Left="{x:Null}" DisplayName="Show Form" FormId="3cd26938-c2ee-4e06-a406-92a5f54f1e70" sap:VirtualizedContainerService.HintSize="478.4,219.2" sap2010:WorkflowViewState.IdRef="ShowFormActivity_1" IsAsync="True" Title="Spider" WindowState="[UiPath.Studio.Forms.Runtime.WindowState.Normal]">
       <ufa:ShowFormActivity.Arguments>
         <InArgument x:TypeArguments="scg:IList(x:String)" x:Key="In_ChoosenSpiderList">[SpiderList]</InArgument>
       </ufa:ShowFormActivity.Arguments>
@@ -271,5 +270,10 @@
         </InArgument>
       </ufa:ShowFormActivity.Width>
     </ufa:ShowFormActivity>
+    <ui:StartTriggers ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Run Local Triggers" sap:VirtualizedContainerService.HintSize="478.4,119.2" sap2010:WorkflowViewState.IdRef="StartTriggers_1" UnSafe="False" WorkflowFileName=".local\generated\Triggers.Generated.xaml">
+      <ui:StartTriggers.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:StartTriggers.Arguments>
+    </ui:StartTriggers>
   </Sequence>
 </Activity>
