@@ -23,13 +23,17 @@
         "keyModified": true
       },
       {
-        "label": "Get",
+        "label": "GetSpiderButton",
         "action": "event",
         "showValidations": false,
         "disableOnInvalid": true,
         "tableView": false,
-        "key": "submit",
+        "key": "GetSpiderData",
+        "properties": {
+          "Out_ChoosenSpider": "Out_ChoosenSpider"
+        },
         "type": "button",
+        "event": "GetSpiderData.xaml",
         "input": true
       }
     ]
