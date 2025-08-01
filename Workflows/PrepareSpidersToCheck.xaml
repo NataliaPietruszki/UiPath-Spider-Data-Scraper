@@ -123,7 +123,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
+      
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="PrepareSpidersToCheck" sap:VirtualizedContainerService.HintSize="954.8000000000001,2360" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -237,7 +237,7 @@
     </uasc:FilterCollection>
     <ufa:ShowFormActivity InstanceName="{x:Null}" Left="{x:Null}" DisplayName="Show Form" FormId="3cd26938-c2ee-4e06-a406-92a5f54f1e70" sap:VirtualizedContainerService.HintSize="478.4,219.2" sap2010:WorkflowViewState.IdRef="ShowFormActivity_1" IsAsync="True" Title="Spider" WindowState="[UiPath.Studio.Forms.Runtime.WindowState.Normal]">
       <ufa:ShowFormActivity.Arguments>
-        <InArgument x:TypeArguments="scg:IList(x:String)" x:Key="In_ChoosenSpiderList">[SpiderList]</InArgument>
+        <InOutArgument x:TypeArguments="scg:IList(x:String)" x:Key="In_ChoosenSpiderList">[SpiderList]</InOutArgument>
       </ufa:ShowFormActivity.Arguments>
       <ufa:ShowFormActivity.Height>
         <InArgument x:TypeArguments="s:Nullable(x:Int32)">
