@@ -90,7 +90,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetSpiderTrigger" sap:VirtualizedContainerService.HintSize="954.8000000000001,557.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetSpiderTrigger" sap:VirtualizedContainerService.HintSize="954.8000000000001,614.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ChoosenSpider" />
     </Sequence.Variables>
@@ -105,7 +105,7 @@
         <OutArgument x:TypeArguments="x:String" x:Key="In_ChoosenSpiderList">[ChoosenSpider]</OutArgument>
       </ufa:GetFormFieldsActivity.Arguments>
     </ufa:GetFormFieldsActivity>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetSpiderDetails - Invoke Workflow File (Workflows\GetSpiderDetails.xaml)" sap:VirtualizedContainerService.HintSize="449.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\GetSpiderDetails.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetSpiderDetails - Invoke Workflow File (Workflows\GetSpiderDetails.xaml)" sap:VirtualizedContainerService.HintSize="449.6,224" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\GetSpiderDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="In_ChoosenSpider">[ChoosenSpider]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
